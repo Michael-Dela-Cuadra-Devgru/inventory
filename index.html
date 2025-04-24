@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory Management System</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- Login Form -->
+        <div id="loginForm" class="login-form">
+            <h2>Login</h2>
+            <input type="email" id="loginEmail" placeholder="Enter email" required />
+            <input type="password" id="loginPassword" placeholder="Enter password" required />
+            <button id="loginBtn">Login</button>
+            <p id="loginError" class="error-message"></p>
+        </div>
+
+        <!-- Inventory Management System -->
+        <div id="inventorySystem" class="hidden">
+            <header>
+                <h1>Inventory Management</h1>
+                <button id="logoutBtn">Logout</button>
+            </header>
+
+            <main>
+                <div class="form-container">
+                    <input type="text" id="itemName" placeholder="Enter item name" required />
+                    <input type="number" id="itemQuantity" placeholder="Enter quantity" required />
+                    <div class="category-container">
+                        <label for="electronics">Electronics</label>
+                        <input type="checkbox" id="electronics" value="Electronics" />
+                        <label for="clothing">Clothing</label>
+                        <input type="checkbox" id="clothing" value="Clothing" />
+                        <label for="furniture">Furniture</label>
+                        <input type="checkbox" id="furniture" value="Furniture" />
+                        <label for="newArrivals">New Arrivals</label>
+                        <input type="checkbox" id="newArrivals" value="New Arrivals" />
+                    </div>
+                    <button id="addItemBtn">Add Item</button>
+                    <button id="updateItemBtn" style="display: none;">Update Item</button>
+                </div>
+
+                <div class="filter-container">
+                    <label for="categoryFilter">Filter by category:</label>
+                    <select id="categoryFilter">
+            <option value="all">All</option>
+            <option value="electronics">Electronics</option>
+            <option value="clothing">Clothing</option>
+            <option value="furniture">Furniture</option>
+            <option value="newArrivals">New Arrivals</option>
+          </select>
+                </div>
+
+                <section class="inventory-list">
+                    <h2>Inventory</h2>
+                    <ul id="inventory">
+                        <!-- Inventory items will be listed here -->
+                    </ul>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
